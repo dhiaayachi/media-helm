@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  jellyfin:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2023-02-25T00:20:08.03970518-05:00"
+    description: Jellyfin Media Server
+    digest: d6ff241a605cc9d7feb9376c53d08f695dc1c684418cf001b674296ff5f224a8
+    name: jellyfin
+    type: application
+    urls:
+    - dhiaayachi.github.io/v0.0.1/jellyfin-0.3.0.tgz
+    version: 0.3.0
+  sonarr:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2023-02-25T00:20:08.040903931-05:00"
+    description: Sonarr Media Server
+    digest: cef04caa72e7fa63f6cbd6e021dabae2b76bace0b37e3363342be24664f20130
+    name: sonarr
+    type: application
+    urls:
+    - dhiaayachi.github.io/v0.0.1/sonarr-0.3.0.tgz
+    version: 0.3.0
+generated: "2023-02-25T00:20:08.037119186-05:00"
