@@ -1,3 +1,15 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: jellyfin-config
+data:
+  PGID: "{{ .Values.deployment.groupID }}"
+  PUID: "{{ .Values.deployment.userID }}"
+  TZ:  "{{ .Values.deployment.timeZone }}"
+  
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -24,10 +36,6 @@ spec:
     {{- if .Values.enableDLNA }}
       hostNetwork: true
     {{- end }}
-      securityContext:
-        runAsUser: {{ .Values.userID }}
-        runAsGroup: {{ .Values.groupID }}
-        fsGroup: {{ .Values.groupID }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -42,6 +50,9 @@ spec:
               hostPort: 1900
               protocol: UDP
           {{- end }}
+          envFrom:
+            - configMapRef:
+                name: sonarr-config  
           livenessProbe:
             tcpSocket:
               port: http
