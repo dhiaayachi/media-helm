@@ -1,28 +1,22 @@
-# Default values for jellyfin.
+# Default values for sonarr.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: docker.io/jellyfin/jellyfin
+  repository: lscr.io/linuxserver/sonarr
   tag: latest
   pullPolicy: IfNotPresent
 
 nameOverride: ""
 fullnameOverride: ""
-userID: 1000
-groupID: 1000 
-
-# Setting this to true enables DLNA which requires the pod to be attached to the
-# host network in order to be useful - this can break things like ingress to the service
-# https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#hosts-namespaces
-# https://jellyfin.org/docs/general/networking/dlna.html
-enableDLNA: false
+userID: 1001
+groupID: 1002 
 
 service:
   type: ClusterIP
-  port: 8096
+  port: 8989
   ## Specify the nodePort value for the LoadBalancer and NodePort service types.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
   ##
@@ -49,16 +43,16 @@ ingress:
       #cert-manager.io/issuer: acme-issuer
   path: /
   hosts:
-    - jellyfin.foo.local
+    - sonarr.foo.local
   tls: []
-  #- secretName: jellyfin-tls
+  #- secretName: sonarr-tls
   #   hosts:
-  #      - jellyfin.foo.local
+  #      - sonarr.foo.local
 
 persistence:
   config:
     enabled: false
-    ## jellyfin configuration data Persistent Volume Storage Class
+    ## sonarr configuration data Persistent Volume Storage Class
     ## If defined, storageClassName: <storageClass>
     ## If set to "-", storageClassName: "", which disables dynamic provisioning
     ## If undefined (the default) or set to null, no storageClassName spec is
