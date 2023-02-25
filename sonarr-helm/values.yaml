@@ -11,8 +11,11 @@ image:
 
 nameOverride: ""
 fullnameOverride: ""
-userID: 1001
-groupID: 1002 
+
+deployment:
+  userID: 1000
+  groupID: 1000
+  timeZone: Etc/UTC 
 
 service:
   type: ClusterIP
