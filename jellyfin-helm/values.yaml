@@ -11,8 +11,8 @@ image:
 
 nameOverride: ""
 fullnameOverride: ""
-userID: 1002
-groupID: 1003 
+userID: 1000
+groupID: 1000 
 
 # Setting this to true enables DLNA which requires the pod to be attached to the
 # host network in order to be useful - this can break things like ingress to the service
@@ -45,15 +45,15 @@ ingress:
   enabled: true
   annotations:
     kubernetes.io/ingress.class: nginx
-    kubernetes.io/tls-acme: "true"
-    cert-manager.io/issuer: cloudflare-issuer
+      #kubernetes.io/tls-acme: "true"
+      #cert-manager.io/issuer: acme-issuer
   path: /
   hosts:
-    - jellyfin.k8s.int.dhayachi.org
-  tls:
-    - secretName: jellyfin-tls
-      hosts:
-        - jellyfin.k8s.int.dhayachi.org
+    - jellyfin.foo.local
+  tls:[]
+  #- secretName: jellyfin-tls
+  #   hosts:
+  #      - jellyfin.foo.local
 
 persistence:
   config:
@@ -117,24 +117,24 @@ tolerations: []
 affinity: {}
 
 
-extraVolumes:
-  - name: config
-    hostPath:
-      path: /var/media/config/jelly
-  - name: tv
-    hostPath:
-      path: /var/media/media/tv
-  - name: movies
-    hostPath:
-      path: /var/media/media/movies
+extraVolumes: []
+  #- name: config
+  #  hostPath:
+  #    path: /var/media/config/jelly
+  #- name: tv
+  #  hostPath:
+  #    path: /var/media/tv
+  #- name: movies
+  #  hostPath:
+  #    path: /var/media/movies
 
 
 
-extraVolumeMounts:
-  - mountPath: /config
-    name: config
-  - mountPath: /data/tvshows
-    name: tv
-  - mountPath: /data/movies
-    name: movies
+extraVolumeMounts: []
+  #- mountPath: /config
+  #  name: config
+  #- mountPath: /data/tvshows
+  #  name: tv
+  #- mountPath: /data/movies
+  #  name: movies
 
