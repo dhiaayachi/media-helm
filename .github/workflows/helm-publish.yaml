@@ -10,8 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: J12934/helm-gh-pages-action@master
+      - uses: stefanprodan/helm-gh-pages@master
         with:
           access-token: ${{ secrets.GH_PUBLISH_ACCESS_TOKEN }}
           deploy-branch: media-chart
-          charts-folder: ""
+          charts-folder: charts
+          commit_username: dhiaayachi
+          commit_email: dhia@ayachi.dev
