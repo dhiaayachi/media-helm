@@ -14,4 +14,4 @@ jobs:
         with:
           access-token: ${{ secrets.GH_PUBLISH_ACCESS_TOKEN }}
           deploy-branch: media-chart
-          charts-folder: .
+          charts-folder: ""
