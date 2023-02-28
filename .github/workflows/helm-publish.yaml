@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: echo "VERSION=$(cut -c 10- <<<${{ github.ref_name }})">>$GITHUB_ENV
-      - run: env
+      - id: version
+        run: echo "helm_version=$(cut -c 10- <<<${{ github.ref_name }})">>$GITHUB_OUTPUT
       - uses: stefanprodan/helm-gh-pages@master
         with:
           token: ${{ secrets.GH_PUBLISH_ACCESS_TOKEN }}
@@ -20,4 +20,4 @@ jobs:
           charts_dir: charts
           commit_username: dhiaayachi
           commit_email: dhia@ayachi.dev
-          chart_version: ${VERSION}
+          chart_version: ${{ steps.version.outputs.helm_version }}
