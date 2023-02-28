@@ -3,6 +3,16 @@ entries:
   jellyfin:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2023-02-28T20:04:17.119301782Z"
+    description: Jellyfin Media Server
+    digest: e4328c0bd1447c99a2784a60e19160f47558e57f8cb507c4003747758a951c5f
+    name: jellyfin
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/jellyfin-0.0.7.tgz
+    version: 0.0.7
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2023-02-28T20:00:49.986338194Z"
     description: Jellyfin Media Server
     digest: 48134af7098e1be8fb83c9194f28baa32d96e701c982f5b8eda26e9176d8e3db
@@ -24,6 +34,16 @@ entries:
   radarr:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2023-02-28T20:04:17.120281185Z"
+    description: radarr Media Server
+    digest: ad02ebc550e9ab5520abd5be55abdb53b1b9a6813467ad54b9fd13c5d1aca72c
+    name: radarr
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/radarr-0.0.7.tgz
+    version: 0.0.7
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2023-02-28T20:00:49.9868728Z"
     description: radarr Media Server
     digest: ea58629211171468d1e0d58de52492419302e3fef8d862935eec343eb9e5e86d
@@ -42,7 +62,28 @@ entries:
     urls:
     - https://dhiaayachi.github.io/media-helm/radarr-0.0.5.tgz
     version: 0.0.5
+  sabnzbd:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2023-02-28T20:04:17.120885987Z"
+    description: Sabnzbd Media Server
+    digest: 8a5d2a4385ca7c82b3ae73b013a99049f95be6eb350732869d9e539a2d011a69
+    name: sabnzbd
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/sabnzbd-0.0.7.tgz
+    version: 0.0.7
   sonarr:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2023-02-28T20:04:17.121423389Z"
+    description: Sonarr Media Server
+    digest: cd95d25a9f4638eeac33a54cf8d0e9719f8b401edde7f3d9ead82e0e160a5860
+    name: sonarr
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/sonarr-0.0.7.tgz
+    version: 0.0.7
   - apiVersion: v2
     appVersion: "1.0"
     created: "2023-02-28T20:00:49.987362606Z"
@@ -63,4 +104,4 @@ entries:
     urls:
     - https://dhiaayachi.github.io/media-helm/sonarr-0.0.5.tgz
     version: 0.0.5
-generated: "2023-02-28T20:00:49.985618085Z"
+generated: "2023-02-28T20:04:17.117784276Z"
