@@ -17,3 +17,4 @@ jobs:
           charts_dir: charts
           commit_username: dhiaayachi
           commit_email: dhia@ayachi.dev
+          chart_version: cut -c 10- <<< ${{ github.ref_name }}
