@@ -1,11 +1,11 @@
-# Default values for sabnzbd.
+# Default values for jellyseer.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: ghcr.io/linuxserver/sabnzbd
+  repository: lscr.io/linuxserver/jellyseer
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -19,7 +19,7 @@ deployment:
 
 service:
   type: ClusterIP
-  port: 8080
+  port: 5055
   ## Specify the nodePort value for the LoadBalancer and NodePort service types.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
   ##
@@ -46,16 +46,16 @@ ingress:
       #cert-manager.io/issuer: acme-issuer
   path: /
   hosts:
-    - sabnzbd.foo.local
+    - jellyseer.foo.local
   tls: []
-  #- secretName: sabnzbd-tls
+  #- secretName: jellyseer-tls
   #   hosts:
-  #      - sabnzbd.foo.local
+  #      - jellyseer.foo.local
 
 persistence:
   config:
     enabled: false
-    ## sabnzbd configuration data Persistent Volume Storage Class
+    ## jellyseer configuration data Persistent Volume Storage Class
     ## If defined, storageClassName: <storageClass>
     ## If set to "-", storageClassName: "", which disables dynamic provisioning
     ## If undefined (the default) or set to null, no storageClassName spec is
