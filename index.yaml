@@ -3,9 +3,9 @@ entries:
   jellyfin:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2023-02-28T16:38:15.197086822Z"
+    created: "2023-02-28T16:41:54.519970153Z"
     description: Jellyfin Media Server
-    digest: bb25c6534b4af3ed32675646c133a56cba78c455a2e57c6700a9f85122959554
+    digest: 4d208338faaea6dc54fc8afc0b07781d1754877af7a9ef1ed486516b462a65e9
     name: jellyfin
     type: application
     urls:
@@ -14,9 +14,9 @@ entries:
   radarr:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2023-02-28T16:38:15.197631025Z"
+    created: "2023-02-28T16:41:54.520651649Z"
     description: radarr Media Server
-    digest: 9d3168c657dc7de0d223267d791f8b708737c40ae1d135ae61e33586b399e963
+    digest: 03c5c93aa6cad3f24a7852625c3700a9efba51cbb9ecb427a87369aa03854c8c
     name: radarr
     type: application
     urls:
@@ -25,12 +25,12 @@ entries:
   sonarr:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2023-02-28T16:38:15.198142028Z"
+    created: "2023-02-28T16:41:54.521571644Z"
     description: Sonarr Media Server
-    digest: ca00c888b0562759d760630038a6fa6184060fd4adf58f9dce9f370d1f8b7394
+    digest: da6389c64cd22764778758db145216f8723c33dfb7e077b2e05611db356d2f8e
     name: sonarr
     type: application
     urls:
     - https://dhiaayachi.github.io/media-helm/sonarr-0.3.0.tgz
     version: 0.3.0
-generated: "2023-02-28T16:38:15.196314717Z"
+generated: "2023-02-28T16:41:54.518858559Z"
