@@ -6,18 +6,13 @@ on:
       - release/*
 
 jobs:
-  version:
-    runs-on: ubuntu-latest
-    steps:
-      - id: version
-        run: echo "helm_version=$(cut -c 10- <<<${{ github.ref_name }})">>$GITHUB_OUTPUT
-    outputs:
-      version: ${{ steps.version.outputs.helm_version }}
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - id: version
+        run: echo "helm_version=$(cut -c 10- <<<${{ github.ref_name }})">>$GITHUB_OUTPUT
       - uses: stefanprodan/helm-gh-pages@master
         with:
           token: ${{ secrets.GH_PUBLISH_ACCESS_TOKEN }}
@@ -25,4 +20,4 @@ jobs:
           charts_dir: charts
           commit_username: dhiaayachi
           commit_email: dhia@ayachi.dev
-          chart_version: ${{needs.version.outputs.helm_version}}
+          chart_version: ${{ steps.version.outputs.helm_version }}
