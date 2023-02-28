@@ -11,14 +11,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: export VERSION=`cut -c 10- <<< ${{ github.ref_name }}`
-      - run: cut -c 10- <<< ${{ github.ref_name }}
-      - run: echo ${VERSION}
       - uses: stefanprodan/helm-gh-pages@master
+        env:
+          VERSION: ${{ github.ref_name }}
         with:
           token: ${{ secrets.GH_PUBLISH_ACCESS_TOKEN }}
           branch: media-chart
           charts_dir: charts
           commit_username: dhiaayachi
           commit_email: dhia@ayachi.dev
-          chart_version: ${VERSION}
+          chart_version: ${VERSION#release/v}
