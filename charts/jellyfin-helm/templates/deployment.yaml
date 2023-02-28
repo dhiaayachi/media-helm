@@ -52,7 +52,7 @@ spec:
           {{- end }}
           envFrom:
             - configMapRef:
-                name: sonarr-config  
+                name: jellyfin-config  
           livenessProbe:
             tcpSocket:
               port: http
