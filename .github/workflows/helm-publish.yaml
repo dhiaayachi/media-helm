@@ -9,6 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - run: |
+        export VERSION=$(cut -c 10- <<< ${{ github.ref_name }})
       - uses: actions/checkout@v1
       - uses: stefanprodan/helm-gh-pages@master
         with:
@@ -17,4 +19,4 @@ jobs:
           charts_dir: charts
           commit_username: dhiaayachi
           commit_email: dhia@ayachi.dev
-          chart_version: $(cut -c 10- <<< ${{ github.ref_name }})
+          chart_version: ${VERSION}
