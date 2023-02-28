@@ -7,6 +7,13 @@ data:
   PGID: "{{ .Values.deployment.groupID }}"
   PUID: "{{ .Values.deployment.userID }}"
   TZ:  "{{ .Values.deployment.timeZone }}"
+  extrasLanguages: "en-US,fr-FR"
+  enableExtras: true
+  extrasType: trailer
+  enableQueueCleaner: true
+  enableRecyclarr: true
+  enableAutoConfig: true
+  extrasOfficialOnly: true
   
 ---
 
