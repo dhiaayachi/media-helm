@@ -1,11 +1,11 @@
-# Default values for jellyseer.
+# Default values for jellyseerr.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: lscr.io/linuxserver/jellyseer
+  repository: lscr.io/linuxserver/jellyseerr
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -46,16 +46,16 @@ ingress:
       #cert-manager.io/issuer: acme-issuer
   path: /
   hosts:
-    - jellyseer.foo.local
+    - jellyseerr.foo.local
   tls: []
-  #- secretName: jellyseer-tls
+  #- secretName: jellyseerr-tls
   #   hosts:
-  #      - jellyseer.foo.local
+  #      - jellyseerr.foo.local
 
 persistence:
   config:
     enabled: false
-    ## jellyseer configuration data Persistent Volume Storage Class
+    ## jellyseerr configuration data Persistent Volume Storage Class
     ## If defined, storageClassName: <storageClass>
     ## If set to "-", storageClassName: "", which disables dynamic provisioning
     ## If undefined (the default) or set to null, no storageClassName spec is

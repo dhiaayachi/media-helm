@@ -3,10 +3,10 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: {{ template "jellyseer.fullname" . }}-media
+  name: {{ template "jellyseerr.fullname" . }}-media
   labels:
-    app.kubernetes.io/name: {{ include "jellyseer.name" . }}
-    helm.sh/chart: {{ include "jellyseer.chart" . }}
+    app.kubernetes.io/name: {{ include "jellyseerr.name" . }}
+    helm.sh/chart: {{ include "jellyseerr.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:

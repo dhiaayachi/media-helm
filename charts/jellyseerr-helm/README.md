@@ -1,6 +1,6 @@
-# Jellyseer Software Media System
+# Jellyseerr Software Media System
 
-This is a helm chart for [Jellyseer](https://github.com/jellyseer/jellyseer/)
+This is a helm chart for [Jellyseerr](https://github.com/jellyseerr/jellyseerr/)
 
 ## Prerequisites
 
@@ -10,8 +10,8 @@ This is a helm chart for [Jellyseer](https://github.com/jellyseer/jellyseer/)
 ## TL;DR;
 
 ```shell
-$ git clone https://github.com/brianmcarey/jellyseer-helm.git
-$ helm install ./jellyseer-helm
+$ git clone https://github.com/brianmcarey/jellyseerr-helm.git
+$ helm install ./jellyseerr-helm
 ```
 
 ## Installing the Chart
@@ -19,8 +19,8 @@ $ helm install ./jellyseer-helm
 To install the chart with the release name `my-release`:
 
 ```console
-git clone https://github.com/brianmcarey/jellyseer-helm.git
-helm install  my-release ./jellyseer-helm
+git clone https://github.com/brianmcarey/jellyseerr-helm.git
+helm install  my-release ./jellyseerr-helm
 ```
 
 ## Uninstalling the Chart
@@ -35,18 +35,18 @@ The command removes all the Kubernetes components associated with the chart and 
 
 ## Configuration
 
-The following tables lists the configurable parameters of the Jellyseer chart and their default values.
+The following tables lists the configurable parameters of the Jellyseerr chart and their default values.
 
 | Parameter                  | Description                         | Default                                                 |
 |----------------------------|-------------------------------------|---------------------------------------------------------|
-| `image.repository`         | Image repository | `docker.io/jellyseer/jellyseer` |
-| `image.tag`                | Image tag. Possible values listed [here](https://hub.docker.com/r/jellyseer/jellyseer/tags/).| `latest`|
+| `image.repository`         | Image repository | `docker.io/jellyseerr/jellyseerr` |
+| `image.tag`                | Image tag. Possible values listed [here](https://hub.docker.com/r/jellyseerr/jellyseerr/tags/).| `latest`|
 | `image.pullPolicy`         | Image pull policy | `IfNotPresent` |
-| `Service.type`          | Kubernetes service type for the jellyseer GUI | `ClusterIP` |
-| `Service.port`          | Kubernetes port where the jellyseer GUI is exposed| `8096` |
-| `Service.annotations`   | Service annotations for the jellyseer GUI | `{}` |
+| `Service.type`          | Kubernetes service type for the jellyseerr GUI | `ClusterIP` |
+| `Service.port`          | Kubernetes port where the jellyseerr GUI is exposed| `8096` |
+| `Service.annotations`   | Service annotations for the jellyseerr GUI | `{}` |
 | `Service.labels`        | Custom labels | `{}` |
-| `Service.loadBalancerIP` | Loadbalance IP for the jellyseer GUI | `{}` |
+| `Service.loadBalancerIP` | Loadbalance IP for the jellyseerr GUI | `{}` |
 | `Service.loadBalancerSourceRanges` | List of IP CIDRs allowed access to load balancer (if supported)      | None
 | `ingress.enabled`              | Enables Ingress | `false` |
 | `ingress.annotations`          | Ingress annotations | `{}` |
