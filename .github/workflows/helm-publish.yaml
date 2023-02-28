@@ -12,6 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - run: export VERSION=`cut -c 10- <<< ${{ github.ref_name }}`
+      - run: echo ${VERSION}
       - uses: stefanprodan/helm-gh-pages@master
         with:
           token: ${{ secrets.GH_PUBLISH_ACCESS_TOKEN }}
