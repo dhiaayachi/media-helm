@@ -1,8 +1,22 @@
+  #  image: ghcr.io/linuxserver/sabnzbd
+  #   container_name: sabnzbd
+  #   environment:
+  #     - PUID=1002
+  #     - PGID=1003
+  #     - TZ=America/Montreal
+  #     - VIRTUAL_HOST=sabnzb.media.int.dhayachi.org
+  #     - VIRTUAL_PORT=8080
+  #   volumes:
+  #     - /var/media/config/sabnzb:/config
+  #     - /var/media/downloads:/downloads
+  #     - /var/media/incomplete-downloads:/incomplete-downloads #optional
+  #   restart: unless-stopped
+
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: sonarr-config
+  name: sabnzbd-config
 data:
   PGID: "{{ .Values.deployment.groupID }}"
   PUID: "{{ .Values.deployment.userID }}"
@@ -13,10 +27,10 @@ data:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "sonarr.fullname" . }}
+  name: {{ include "sabnzbd.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "sonarr.name" . }}
-    helm.sh/chart: {{ include "sonarr.chart" . }}
+    app.kubernetes.io/name: {{ include "sabnzbd.name" . }}
+    helm.sh/chart: {{ include "sabnzbd.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
@@ -25,12 +39,12 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "sonarr.name" . }}
+      app.kubernetes.io/name: {{ include "sabnzbd.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ include "sonarr.name" . }}
+        app.kubernetes.io/name: {{ include "sabnzbd.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
     {{- if .Values.enableDLNA }}
@@ -42,11 +56,11 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 8989
+              containerPort: 8080
               protocol: TCP
           envFrom:
             - configMapRef:
-                name: sonarr-config  
+                name: sabnzbd-config  
           livenessProbe:
             tcpSocket:
               port: http
@@ -78,12 +92,12 @@ spec:
       {{- if .Values.persistence.config.enabled }}
       - name: config
         persistentVolumeClaim:
-          claimName: {{ if .Values.persistence.config.existingClaim }}{{ .Values.persistence.config.existingClaim }}{{- else }}{{ template "sonarr.fullname" . }}-config{{- end }}
+          claimName: {{ if .Values.persistence.config.existingClaim }}{{ .Values.persistence.config.existingClaim }}{{- else }}{{ template "sabnzbd.fullname" . }}-config{{- end }}
       {{- end }}
       - name: media
       {{- if .Values.persistence.media.enabled }}
         persistentVolumeClaim:
-          claimName: {{ if .Values.persistence.media.existingClaim }}{{ .Values.persistence.media.existingClaim }}{{- else }}{{ template "sonarr.fullname" . }}-media{{- end }}
+          claimName: {{ if .Values.persistence.media.existingClaim }}{{ .Values.persistence.media.existingClaim }}{{- else }}{{ template "sabnzbd.fullname" . }}-media{{- end }}
       {{- else }}
         emptyDir: {}
       {{- end }}

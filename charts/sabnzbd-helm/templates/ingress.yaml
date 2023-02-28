@@ -1,13 +1,13 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "sonarr.fullname" . -}}
+{{- $fullName := include "sabnzbd.fullname" . -}}
 {{- $ingressPath := .Values.ingress.path -}}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    app.kubernetes.io/name: {{ include "sonarr.name" . }}
-    helm.sh/chart: {{ include "sonarr.chart" . }}
+    app.kubernetes.io/name: {{ include "sabnzbd.name" . }}
+    helm.sh/chart: {{ include "sabnzbd.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- with .Values.ingress.annotations }}

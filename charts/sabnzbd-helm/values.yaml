@@ -1,11 +1,11 @@
-# Default values for sonarr.
+# Default values for sabnzbd.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: lscr.io/linuxserver/sonarr
+  repository: lscr.io/linuxserver/sabnzbd
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -46,16 +46,16 @@ ingress:
       #cert-manager.io/issuer: acme-issuer
   path: /
   hosts:
-    - sonarr.foo.local
+    - sabnzbd.foo.local
   tls: []
-  #- secretName: sonarr-tls
+  #- secretName: sabnzbd-tls
   #   hosts:
-  #      - sonarr.foo.local
+  #      - sabnzbd.foo.local
 
 persistence:
   config:
     enabled: false
-    ## sonarr configuration data Persistent Volume Storage Class
+    ## sabnzbd configuration data Persistent Volume Storage Class
     ## If defined, storageClassName: <storageClass>
     ## If set to "-", storageClassName: "", which disables dynamic provisioning
     ## If undefined (the default) or set to null, no storageClassName spec is

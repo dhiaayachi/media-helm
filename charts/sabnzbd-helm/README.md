@@ -1,6 +1,6 @@
-# Sonarr Software Media System
+# Sabnzbd Software Media System
 
-This is a helm chart for [Sonarr](https://github.com/sonarr/sonarr/)
+This is a helm chart for [Sabnzbd](https://github.com/sabnzbd/sabnzbd/)
 
 ## Prerequisites
 
@@ -10,8 +10,8 @@ This is a helm chart for [Sonarr](https://github.com/sonarr/sonarr/)
 ## TL;DR;
 
 ```shell
-$ git clone https://github.com/brianmcarey/sonarr-helm.git
-$ helm install ./sonarr-helm
+$ git clone https://github.com/brianmcarey/sabnzbd-helm.git
+$ helm install ./sabnzbd-helm
 ```
 
 ## Installing the Chart
@@ -19,8 +19,8 @@ $ helm install ./sonarr-helm
 To install the chart with the release name `my-release`:
 
 ```console
-git clone https://github.com/brianmcarey/sonarr-helm.git
-helm install  my-release ./sonarr-helm
+git clone https://github.com/brianmcarey/sabnzbd-helm.git
+helm install  my-release ./sabnzbd-helm
 ```
 
 ## Uninstalling the Chart
@@ -35,18 +35,18 @@ The command removes all the Kubernetes components associated with the chart and 
 
 ## Configuration
 
-The following tables lists the configurable parameters of the Sonarr chart and their default values.
+The following tables lists the configurable parameters of the Sabnzbd chart and their default values.
 
 | Parameter                  | Description                         | Default                                                 |
 |----------------------------|-------------------------------------|---------------------------------------------------------|
-| `image.repository`         | Image repository | `docker.io/sonarr/sonarr` |
-| `image.tag`                | Image tag. Possible values listed [here](https://hub.docker.com/r/sonarr/sonarr/tags/).| `latest`|
+| `image.repository`         | Image repository | `docker.io/sabnzbd/sabnzbd` |
+| `image.tag`                | Image tag. Possible values listed [here](https://hub.docker.com/r/sabnzbd/sabnzbd/tags/).| `latest`|
 | `image.pullPolicy`         | Image pull policy | `IfNotPresent` |
-| `Service.type`          | Kubernetes service type for the sonarr GUI | `ClusterIP` |
-| `Service.port`          | Kubernetes port where the sonarr GUI is exposed| `8096` |
-| `Service.annotations`   | Service annotations for the sonarr GUI | `{}` |
+| `Service.type`          | Kubernetes service type for the sabnzbd GUI | `ClusterIP` |
+| `Service.port`          | Kubernetes port where the sabnzbd GUI is exposed| `8096` |
+| `Service.annotations`   | Service annotations for the sabnzbd GUI | `{}` |
 | `Service.labels`        | Custom labels | `{}` |
-| `Service.loadBalancerIP` | Loadbalance IP for the sonarr GUI | `{}` |
+| `Service.loadBalancerIP` | Loadbalance IP for the sabnzbd GUI | `{}` |
 | `Service.loadBalancerSourceRanges` | List of IP CIDRs allowed access to load balancer (if supported)      | None
 | `ingress.enabled`              | Enables Ingress | `false` |
 | `ingress.annotations`          | Ingress annotations | `{}` |

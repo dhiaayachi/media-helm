@@ -3,10 +3,10 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: {{ template "sonarr.fullname" . }}-media
+  name: {{ template "sabnzbd.fullname" . }}-media
   labels:
-    app.kubernetes.io/name: {{ include "sonarr.name" . }}
-    helm.sh/chart: {{ include "sonarr.chart" . }}
+    app.kubernetes.io/name: {{ include "sabnzbd.name" . }}
+    helm.sh/chart: {{ include "sabnzbd.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:

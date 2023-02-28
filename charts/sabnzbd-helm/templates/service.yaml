@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ template "sonarr.fullname" . }}
+  name: {{ template "sabnzbd.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "sonarr.name" . }}
-    helm.sh/chart: {{ include "sonarr.chart" . }}
+    app.kubernetes.io/name: {{ include "sabnzbd.name" . }}
+    helm.sh/chart: {{ include "sabnzbd.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- if .Values.service.labels }}
@@ -48,5 +48,5 @@ spec:
       nodePort: {{.Values.service.nodePort}}
 {{ end }}
   selector:
-    app.kubernetes.io/name: {{ include "sonarr.name" . }}
+    app.kubernetes.io/name: {{ include "sabnzbd.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
