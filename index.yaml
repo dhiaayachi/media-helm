@@ -51,17 +51,6 @@ entries:
     urls:
     - https://dhiaayachi.github.io/media-helm/jellyfin-0.0.5.tgz
     version: 0.0.5
-  jellyseer:
-  - apiVersion: v2
-    appVersion: "1.0"
-    created: "2023-02-28T21:34:28.791349936Z"
-    description: Jellyseer Media Server
-    digest: 8720805d89360fd61605317a04d3df10204bd27ca734962a15741b296ee83b84
-    name: jellyseer
-    type: application
-    urls:
-    - https://dhiaayachi.github.io/media-helm/jellyseer-0.0.8.tgz
-    version: 0.0.8
   jellyseerr:
   - apiVersion: v2
     appVersion: "1.0"
