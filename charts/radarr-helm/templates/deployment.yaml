@@ -9,7 +9,7 @@ data:
   TZ:  "{{ .Values.deployment.timeZone }}"
   extrasLanguages: "en-US,fr-FR"
   enableExtras: true
-  extrasType: trailer
+  extrasType: "trailer"
   enableQueueCleaner: true
   enableRecyclarr: true
   enableAutoConfig: true
