@@ -56,7 +56,7 @@ spec:
           livenessProbe:
             tcpSocket:
               port: http
-          initialDelaySeconds: 60
+            initialDelaySeconds: 60
           readinessProbe:
             tcpSocket:
               port: http
