@@ -3,9 +3,9 @@ entries:
   jellyfin:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2023-03-06T18:50:14.838320349Z"
+    created: "2023-03-06T19:01:05.735763937Z"
     description: Jellyfin Media Server
-    digest: 7cd663d36502745079503740e2691f115c06473dc27e59fd75db5fc1cdb8d905
+    digest: e6891f1cc674a6725ce4f523d80542c2e09bc5c49bb22c8b5e6a60c0038c608b
     name: jellyfin
     type: application
     urls:
@@ -64,9 +64,9 @@ entries:
   jellyseerr:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2023-03-06T18:50:14.839157049Z"
+    created: "2023-03-06T19:01:05.736736738Z"
     description: Jellyseerr Media Server
-    digest: ca622ed5300ab8f7fb96f52cbe7d3a3115acebcbb4d5664737f49244c0f6ee7a
+    digest: 90e48b9e07dd642fc6dd89264c13e5250a3eb8e1dade3ee24c20b54b783085ab
     name: jellyseerr
     type: application
     urls:
@@ -85,9 +85,9 @@ entries:
   radarr:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2023-03-06T18:50:14.839943948Z"
+    created: "2023-03-06T19:01:05.737298338Z"
     description: radarr Media Server
-    digest: d1ef45cbef721218500b21039853ec3c8dc3de95fa95cdb4d8ca12fdf90e1534
+    digest: f45499c222ed732a17f4a07f36c3fdf22aa559e7a51e4d29f7f47486074367c2
     name: radarr
     type: application
     urls:
@@ -146,9 +146,9 @@ entries:
   sabnzbd:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2023-03-06T18:50:14.840546848Z"
+    created: "2023-03-06T19:01:05.737847939Z"
     description: Sabnzbd Media Server
-    digest: d7bd6566a59cb3e2c1d99c8ef9d853ee38f19047de354e66ea1413ee507491e7
+    digest: ee4c46e3f396981a720a361619b3db8a75b4b16c88df679adbf6f9c983d94924
     name: sabnzbd
     type: application
     urls:
@@ -187,9 +187,9 @@ entries:
   sonarr:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2023-03-06T18:50:14.841397748Z"
+    created: "2023-03-06T19:01:05.738361039Z"
     description: Sonarr Media Server
-    digest: 1880b81ef45c8bf0aed0bd180b410743c8bee0c4ccded3823ddc2a20bdfe0ba9
+    digest: 8383dedd6e5771049a078da98868fd800256a1fc3a5dc8b6d9c3e2149af813ae
     name: sonarr
     type: application
     urls:
@@ -245,4 +245,4 @@ entries:
     urls:
     - https://dhiaayachi.github.io/media-helm/sonarr-0.0.5.tgz
     version: 0.0.5
-generated: "2023-03-06T18:50:14.83708375Z"
+generated: "2023-03-06T19:01:05.734275937Z"
