@@ -1,17 +1,3 @@
-  #  image: ghcr.io/linuxserver/sabnzbd
-  #   container_name: sabnzbd
-  #   environment:
-  #     - PUID=1002
-  #     - PGID=1003
-  #     - TZ=America/Montreal
-  #     - VIRTUAL_HOST=sabnzb.media.int.dhayachi.org
-  #     - VIRTUAL_PORT=8080
-  #   volumes:
-  #     - /var/media/config/sabnzb:/config
-  #     - /var/media/downloads:/downloads
-  #     - /var/media/incomplete-downloads:/incomplete-downloads #optional
-  #   restart: unless-stopped
-
 ---
 apiVersion: v1
 kind: ConfigMap
