@@ -57,6 +57,11 @@ spec:
             tcpSocket:
               port: http
             initialDelaySeconds: 120
+          startupProbe:
+            tcpSocket:
+              port: http
+            failureThreshold: 300
+            periodSeconds: 300
           readinessProbe:
             tcpSocket:
               port: http
