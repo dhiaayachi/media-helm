@@ -3,6 +3,16 @@ entries:
   jellyfin:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2024-06-13T02:32:49.293238723Z"
+    description: Jellyfin Media Server
+    digest: 89d7c87f2ac232cb25ee78393a9793027069450a8f9c06940bf510a31efa7ded
+    name: jellyfin
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/jellyfin-0.0.14.tgz
+    version: 0.0.14
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2024-06-13T02:24:50.598193185Z"
     description: Jellyfin Media Server
     digest: 6f530ec1260b9ec15080955307e961523b70ce51923f9ce80dffe50e74818b1e
@@ -84,6 +94,16 @@ entries:
   jellyseerr:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2024-06-13T02:32:49.293661833Z"
+    description: Jellyseerr Media Server
+    digest: 731be6b54589f488d847314cf9b762628a78cf60fad9fd20e61119302889ca00
+    name: jellyseerr
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/jellyseerr-0.0.14.tgz
+    version: 0.0.14
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2024-06-13T02:24:50.598643025Z"
     description: Jellyseerr Media Server
     digest: 00b7eef67062c818e04bd795110ee11814063a437eba3e0845a0d3180330f2a4
@@ -123,6 +143,16 @@ entries:
     - https://dhiaayachi.github.io/media-helm/jellyseerr-0.0.9.tgz
     version: 0.0.9
   radarr:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-06-13T02:32:49.294065246Z"
+    description: radarr Media Server
+    digest: b554c9fe9c86631e640fd858221ec60d7105c29e2d51057680f7a4b0350f8fc9
+    name: radarr
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/radarr-0.0.14.tgz
+    version: 0.0.14
   - apiVersion: v2
     appVersion: "1.0"
     created: "2024-06-13T02:24:50.599056096Z"
@@ -206,6 +236,16 @@ entries:
   sabnzbd:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2024-06-13T02:32:49.29445284Z"
+    description: Sabnzbd Media Server
+    digest: 2cd4a2292b8ed1d8524882de4839ce15ebf78faeefa62cb8a4ea06183d3a9c47
+    name: sabnzbd
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/sabnzbd-0.0.14.tgz
+    version: 0.0.14
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2024-06-13T02:24:50.599450363Z"
     description: Sabnzbd Media Server
     digest: 8340aaa1306577c8d2569fc9f2dd145093993a95d0ac250e35e65947a065bbcf
@@ -265,6 +305,16 @@ entries:
     - https://dhiaayachi.github.io/media-helm/sabnzbd-0.0.7.tgz
     version: 0.0.7
   sonarr:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-06-13T02:32:49.294843629Z"
+    description: Sonarr Media Server
+    digest: 9d01850f64bbb12bb3073a8e9db9fdcf6c2615456ebfce61146f9d9e160bcc12
+    name: sonarr
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/sonarr-0.0.14.tgz
+    version: 0.0.14
   - apiVersion: v2
     appVersion: "1.0"
     created: "2024-06-13T02:24:50.599843497Z"
@@ -345,4 +395,4 @@ entries:
     urls:
     - https://dhiaayachi.github.io/media-helm/sonarr-0.0.5.tgz
     version: 0.0.5
-generated: "2024-06-13T02:24:50.597563028Z"
+generated: "2024-06-13T02:32:49.292619277Z"
