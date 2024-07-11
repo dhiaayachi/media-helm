@@ -1,11 +1,11 @@
-# Default values for jellyfin.
+# Default values for llamacpp.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: lscr.io/linuxserver/jellyfin
+  repository:  ghcr.io/allenporter/llama-cpp-server-cpu:main
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -21,12 +21,12 @@ deployment:
 # Setting this to true enables DLNA which requires the pod to be attached to the
 # host network in order to be useful - this can break things like ingress to the service
 # https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#hosts-namespaces
-# https://jellyfin.org/docs/general/networking/dlna.html
+# https://llamacpp.org/docs/general/networking/dlna.html
 enableDLNA: false
 
 service:
   type: ClusterIP
-  port: 8096
+  port: 8000
   ## Specify the nodePort value for the LoadBalancer and NodePort service types.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
   ##
@@ -53,16 +53,16 @@ ingress:
       #cert-manager.io/issuer: acme-issuer
   path: /
   hosts:
-    - jellyfin.foo.local
+    - llamacpp.foo.local
   tls: []
-  #- secretName: jellyfin-tls
+  #- secretName: llamacpp-tls
   #   hosts:
-  #      - jellyfin.foo.local
+  #      - llamacpp.foo.local
 
 persistence:
   config:
     enabled: false
-    ## jellyfin configuration data Persistent Volume Storage Class
+    ## llamacpp configuration data Persistent Volume Storage Class
     ## If defined, storageClassName: <storageClass>
     ## If set to "-", storageClassName: "", which disables dynamic provisioning
     ## If undefined (the default) or set to null, no storageClassName spec is

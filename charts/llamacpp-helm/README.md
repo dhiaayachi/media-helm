@@ -1,6 +1,6 @@
-# Jellyfin Software Media System
+# Llamacpp Software Media System
 
-This is a helm chart for [Jellyfin](https://github.com/jellyfin/jellyfin/)
+This is a helm chart for [Llamacpp](https://github.com/llamacpp/llamacpp/)
 
 ## Prerequisites
 
@@ -10,8 +10,8 @@ This is a helm chart for [Jellyfin](https://github.com/jellyfin/jellyfin/)
 ## TL;DR;
 
 ```shell
-$ git clone https://github.com/brianmcarey/jellyfin-helm.git
-$ helm install ./jellyfin-helm
+$ git clone https://github.com/brianmcarey/llamacpp-helm.git
+$ helm install ./llamacpp-helm
 ```
 
 ## Installing the Chart
@@ -19,8 +19,8 @@ $ helm install ./jellyfin-helm
 To install the chart with the release name `my-release`:
 
 ```console
-git clone https://github.com/brianmcarey/jellyfin-helm.git
-helm install  my-release ./jellyfin-helm
+git clone https://github.com/brianmcarey/llamacpp-helm.git
+helm install  my-release ./llamacpp-helm
 ```
 
 ## Uninstalling the Chart
@@ -35,19 +35,19 @@ The command removes all the Kubernetes components associated with the chart and 
 
 ## Configuration
 
-The following tables lists the configurable parameters of the Jellyfin chart and their default values.
+The following tables lists the configurable parameters of the Llamacpp chart and their default values.
 
 | Parameter                  | Description                         | Default                                                 |
 |----------------------------|-------------------------------------|---------------------------------------------------------|
-| `image.repository`         | Image repository | `docker.io/jellyfin/jellyfin` |
-| `image.tag`                | Image tag. Possible values listed [here](https://hub.docker.com/r/jellyfin/jellyfin/tags/).| `latest`|
+| `image.repository`         | Image repository | `docker.io/llamacpp/llamacpp` |
+| `image.tag`                | Image tag. Possible values listed [here](https://hub.docker.com/r/llamacpp/llamacpp/tags/).| `latest`|
 | `image.pullPolicy`         | Image pull policy | `IfNotPresent` |
-| `enableDLNA`		  | Enable DLNA for jellyfin | `false` |
-| `Service.type`          | Kubernetes service type for the jellyfin GUI | `ClusterIP` |
-| `Service.port`          | Kubernetes port where the jellyfin GUI is exposed| `8096` |
-| `Service.annotations`   | Service annotations for the jellyfin GUI | `{}` |
+| `enableDLNA`		  | Enable DLNA for llamacpp | `false` |
+| `Service.type`          | Kubernetes service type for the llamacpp GUI | `ClusterIP` |
+| `Service.port`          | Kubernetes port where the llamacpp GUI is exposed| `8096` |
+| `Service.annotations`   | Service annotations for the llamacpp GUI | `{}` |
 | `Service.labels`        | Custom labels | `{}` |
-| `Service.loadBalancerIP` | Loadbalance IP for the jellyfin GUI | `{}` |
+| `Service.loadBalancerIP` | Loadbalance IP for the llamacpp GUI | `{}` |
 | `Service.loadBalancerSourceRanges` | List of IP CIDRs allowed access to load balancer (if supported)      | None
 | `ingress.enabled`              | Enables Ingress | `false` |
 | `ingress.annotations`          | Ingress annotations | `{}` |

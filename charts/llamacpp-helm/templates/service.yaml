@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ template "jellyfin.fullname" . }}
+  name: {{ template "llamacpp.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "jellyfin.name" . }}
-    helm.sh/chart: {{ include "jellyfin.chart" . }}
+    app.kubernetes.io/name: {{ include "llamacpp.name" . }}
+    helm.sh/chart: {{ include "llamacpp.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- if .Values.service.labels }}
@@ -48,5 +48,5 @@ spec:
       nodePort: {{.Values.service.nodePort}}
 {{ end }}
   selector:
-    app.kubernetes.io/name: {{ include "jellyfin.name" . }}
+    app.kubernetes.io/name: {{ include "llamacpp.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

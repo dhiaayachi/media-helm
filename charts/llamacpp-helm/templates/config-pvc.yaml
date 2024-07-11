@@ -3,10 +3,10 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: {{ template "jellyfin.fullname" . }}-config
+  name: {{ template "llamacpp.fullname" . }}-config
   labels:
-    app.kubernetes.io/name: {{ include "jellyfin.name" . }}
-    helm.sh/chart: {{ include "jellyfin.chart" . }}
+    app.kubernetes.io/name: {{ include "llamacpp.name" . }}
+    helm.sh/chart: {{ include "llamacpp.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:

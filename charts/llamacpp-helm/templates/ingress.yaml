@@ -1,13 +1,13 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "jellyfin.fullname" . -}}
+{{- $fullName := include "llamacpp.fullname" . -}}
 {{- $ingressPath := .Values.ingress.path -}}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    app.kubernetes.io/name: {{ include "jellyfin.name" . }}
-    helm.sh/chart: {{ include "jellyfin.chart" . }}
+    app.kubernetes.io/name: {{ include "llamacpp.name" . }}
+    helm.sh/chart: {{ include "llamacpp.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- with .Values.ingress.annotations }}

@@ -1,6 +1,6 @@
 apiVersion: v2
 appVersion: "1.0"
-description: Jellyfin Media Server
-name: jellyfin
+description: Llamacpp Media Server
+name: llamacpp
 version: 0.3.0
 type: application
