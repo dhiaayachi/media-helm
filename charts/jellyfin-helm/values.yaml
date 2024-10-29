@@ -16,7 +16,8 @@ fullnameOverride: ""
 deployment:
   userID: 1000
   groupID: 1000
-  timeZone: Etc/UTC 
+  timeZone: Etc/UTC
+  dockerMods: ghcr.io/intro-skipper/intro-skipper-docker-mod
 
 # Setting this to true enables DLNA which requires the pod to be attached to the
 # host network in order to be useful - this can break things like ingress to the service
