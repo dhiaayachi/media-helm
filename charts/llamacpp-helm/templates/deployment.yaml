@@ -67,7 +67,7 @@ spec:
               port: http
           volumeMounts:
             {{- if .Values.persistence.config.enabled }}
-            - mountPath: /data
+            - mountPath: /config
               name: config
               subPath: {{ .Values.persistence.config.subPath }}
             {{- end }}

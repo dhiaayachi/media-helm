@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository:  ghcr.io/allenporter/llama-cpp-server-cpu:main
-  tag: latest
+  repository:  ghcr.io/allenporter/llama-cpp-server-cpu
+  tag: main
   pullPolicy: IfNotPresent
 
 
