@@ -3,6 +3,16 @@ entries:
   bentopdf:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2025-12-05T19:04:04.369671321Z"
+    description: bentopdf Media Server
+    digest: 9dd5daa6dee70e46c17d1aacb4c89d7435922d8e5b4a85ac162e13c0ea2bced5
+    name: bentopdf
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/bentopdf-0.0.20.tgz
+    version: 0.0.20
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2025-12-05T16:54:55.264973499Z"
     description: bentopdf Media Server
     digest: 70ee607dee4796279b2d8fc149f11272cc3f356e0d646b2911f0cc3673dde1b4
@@ -32,6 +42,16 @@ entries:
     - https://dhiaayachi.github.io/media-helm/bentopdf-0.0.17.tgz
     version: 0.0.17
   jellyfin:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-12-05T19:04:04.370114637Z"
+    description: Jellyfin Media Server
+    digest: 7b04f2b715bc0762368e9cf0d71fe65fea98e156b724ae80b0306408a37d83a0
+    name: jellyfin
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/jellyfin-0.0.20.tgz
+    version: 0.0.20
   - apiVersion: v2
     appVersion: "1.0"
     created: "2025-12-05T16:54:55.265568787Z"
@@ -165,6 +185,16 @@ entries:
   jellyseerr:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2025-12-05T19:04:04.370528938Z"
+    description: Jellyseerr Media Server
+    digest: c25ef3f0778617c5d532a923b7a5225d514bbe67bd33ff4ac43c40172164762b
+    name: jellyseerr
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/jellyseerr-0.0.20.tgz
+    version: 0.0.20
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2025-12-05T16:54:55.26647261Z"
     description: Jellyseerr Media Server
     digest: aa657d30914e6544270908ee57a5b3041bf34ff1c2d7c1967ff5ea8b04ccb1b2
@@ -256,6 +286,16 @@ entries:
   llamacpp:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2025-12-05T19:04:04.37094852Z"
+    description: Llamacpp Media Server
+    digest: 91c1495144dd9669b49eaceca30548966af5bfafb626b3545b51a2219758770b
+    name: llamacpp
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/llamacpp-0.0.20.tgz
+    version: 0.0.20
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2025-12-05T16:54:55.267123644Z"
     description: Llamacpp Media Server
     digest: d96edaadf2de5c3fcd08970e5d8d01ee99eb53a4a0b783704c2f3dc186f54d31
@@ -295,6 +335,16 @@ entries:
     - https://dhiaayachi.github.io/media-helm/llamacpp-0.0.15.tgz
     version: 0.0.15
   radarr:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-12-05T19:04:04.371352863Z"
+    description: radarr Media Server
+    digest: 3c6cf5cf633aacec1b75c316a92318f7f595219c70f165d46c5ac0fd52934a93
+    name: radarr
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/radarr-0.0.20.tgz
+    version: 0.0.20
   - apiVersion: v2
     appVersion: "1.0"
     created: "2025-12-05T16:54:55.267522406Z"
@@ -428,6 +478,16 @@ entries:
   sabnzbd:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2025-12-05T19:04:04.3717541Z"
+    description: Sabnzbd Media Server
+    digest: 4727327d5c09f8a204ada63b90123b85dfc258a38068f226f651f85df105a6f3
+    name: sabnzbd
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/sabnzbd-0.0.20.tgz
+    version: 0.0.20
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2025-12-05T16:54:55.267924074Z"
     description: Sabnzbd Media Server
     digest: 039f7abdc2d4f7448adef452709b3cba1fed82c7655d10337bcf549a860d992f
@@ -537,6 +597,16 @@ entries:
     - https://dhiaayachi.github.io/media-helm/sabnzbd-0.0.7.tgz
     version: 0.0.7
   sonarr:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-12-05T19:04:04.372131002Z"
+    description: Sonarr Media Server
+    digest: 2ea73f4fc5069802ebf25b08cf5ec7bd61a6af3eaf85c1cfb54239c6405fb818
+    name: sonarr
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/sonarr-0.0.20.tgz
+    version: 0.0.20
   - apiVersion: v2
     appVersion: "1.0"
     created: "2025-12-05T16:54:55.268343194Z"
@@ -667,7 +737,28 @@ entries:
     urls:
     - https://dhiaayachi.github.io/media-helm/sonarr-0.0.5.tgz
     version: 0.0.5
+  stash:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-12-05T19:04:04.372524645Z"
+    description: Stash Media Server
+    digest: 2fd28659b9432c788ec5093a8221f3967439fd33852e9944771552e513b15272
+    name: stash
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/stash-0.0.20.tgz
+    version: 0.0.20
   whisparr:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-12-05T19:04:04.372928257Z"
+    description: whisparr Media Server
+    digest: 830f7295ed80ebfe37372200e573951467744716a4c38bee792a89548a8a3845
+    name: whisparr
+    type: application
+    urls:
+    - https://dhiaayachi.github.io/media-helm/whisparr-0.0.20.tgz
+    version: 0.0.20
   - apiVersion: v2
     appVersion: "1.0"
     created: "2025-12-05T16:54:55.268740563Z"
@@ -688,4 +779,4 @@ entries:
     urls:
     - https://dhiaayachi.github.io/media-helm/whisparr-0.0.18.tgz
     version: 0.0.18
-generated: "2025-12-05T16:54:55.264080427Z"
+generated: "2025-12-05T19:04:04.368328257Z"
