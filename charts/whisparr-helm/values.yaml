@@ -19,7 +19,7 @@ deployment:
 
 service:
   type: ClusterIP
-  port: 7878
+  port: 6969
   ## Specify the nodePort value for the LoadBalancer and NodePort service types.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
   ##
